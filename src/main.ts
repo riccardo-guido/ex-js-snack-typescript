@@ -31,3 +31,43 @@ let Roberto: Dipendente = {
   sesso: "m",
   anniDiServizio: [2010, 2011, 2012, 2013, 2014, 2015],
 };
+
+// SNACK 3
+
+type Developer = Dipendente & {
+  livelloEsperienza: "Junior" | "Mid" | "Senior";
+  linguaggi?: string[];
+  certificazioni: string[];
+};
+
+type ProjectManager = Dipendente & {
+  teamSize: number | null;
+  budgetGestito?: number;
+  stakeholderPrincipali: string[];
+};
+
+let Maria: Developer = {
+  nome: "Maria",
+  cognome: "Verdi",
+  annoNascita: 1990,
+  sesso: "f",
+  anniDiServizio: [2015, 2016, 2017, 2018, 2019],
+  livelloEsperienza: "Mid",
+  linguaggi: ["JavaScript", "TypeScript", "Python"],
+  certificazioni: ["AWS Certified Developer", "Scrum Master"],
+};
+
+let Luca: ProjectManager = {
+  nome: "Luca",
+  cognome: "Bianchi",
+  annoNascita: 1975,
+  sesso: "m",
+  anniDiServizio: [2000, 2001, 2002, 2003, 2004, 2005],
+  teamSize: 10,
+  budgetGestito: 500000,
+  stakeholderPrincipali: ["CEO", "CTO", "CFO"],
+};
+
+console.log(Roberto);
+console.log(Maria);
+console.log(Luca);
